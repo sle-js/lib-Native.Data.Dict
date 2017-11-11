@@ -7,4 +7,4 @@ install:
   - npm install sle -g
 
 script:
-  - sle tests.js
+  - sle index.js
