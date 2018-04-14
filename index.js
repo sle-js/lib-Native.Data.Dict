@@ -27,6 +27,16 @@ const member = k => m =>
     get(k)(m).isJust();
 
 
+const remove = k => m => {
+    const result =
+        new Map(m);
+
+    result.delete(k);
+
+    return result;
+};
+
+
 const entries = m =>
     [... m.entries()];
 
@@ -41,6 +51,7 @@ module.exports = {
     get,
     insert,
     member,
+    remove,
     singleton,
     values
 };
